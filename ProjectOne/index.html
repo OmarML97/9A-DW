@@ -9,13 +9,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Up and running whit Bootstrap 4</h1>
-        </div>
-        <!-- /.col-md-12 -->
+    <nav class="navbar navbar-light bg-light fixed-top navbar-expand-md">
+      <a href="" class="navbar-brand"> Up and running with bootstrap</a>
+      <button type="button" id="navigation" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-link active">Home</a>
+          </li>
+          <li <class="nav-item">
+            <a href="" class="nav-link">Stations</a>
+          </li>
+          <li <class="nav-item">
+            <a href="" class="nav-link">About</a>
+          </li>
+        </ul>
       </div>
-      <!-- /.row -->
+    </nav>
       <div class="row bg-light p-md-5 p-3 rounded">
         <div class="col-md-6">
           <h2>The fastest way to develop</h2>
@@ -25,7 +37,7 @@
         </div>
         <!-- /.col-md-6 -->
         <div class="col-md-6 d-none d-md-block">
-          <img src="img/12565414_898013580294765_5627164209308597260_n.png" alt=""width="300">
+          <img src="img/tumblr_m0hbprOk8p1rrn0nmo1_500.png" alt=""width="300">
         </div>
         <!-- /.col-md-6 -->
       </div>
@@ -84,7 +96,7 @@
             <h4>Contact us</h4>
             <ul class="list-unstyled">
               <li><a href=""><i class="fas fa-globe"></i> Tehuacan, Pue </a></li>
-              <li><a href=""> <i class="fas fa-phone"></i> 2381664319</a></li>
+              <li><a href=""> <i class="fas fa-phone"></i> 2381111111</a></li>
               <li><a href=""><i class="fas fa-envelope"></i> omarm946@gmail.com</a></li>
             </ul>
           </div>
@@ -95,4 +107,20 @@
     </div>
     <!-- /.footer -->
   </body>
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bower_components/hammerjs/hammer.js"></script>
+  <script type="text/javascript">
+    var $body = document.body;
+    var gestures = new Hammer($body);
+    gestures.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    gestures.on('swipeup', function(ev) {
+	    console.log(ev);
+    });
+    gestures.on('swiperight', function(ev) {
+	    console.log(ev);
+    });
+  </script>
+
 </html>
