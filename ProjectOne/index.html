@@ -113,14 +113,17 @@
   <script type="text/javascript" src="bower_components/hammerjs/hammer.js"></script>
   <script type="text/javascript">
     var $body = document.body;
+    var $navBar = document.getElementById("navbarNav");
     var gestures = new Hammer($body);
+
     gestures.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
     gestures.on('swipeup', function(ev) {
-	    console.log(ev);
+	    $navBar.classList.remove('show');
     });
-    gestures.on('swiperight', function(ev) {
-	    console.log(ev);
+    gestures.on('swipedown', function(ev) {
+      $navBar.classList.add('show');
     });
+
   </script>
 
 </html>
